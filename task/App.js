@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 
 
-import KakaoPage from './comps/Item';
+import ItemPage from './comps/Item';
 
 
 
@@ -35,7 +35,7 @@ const App: () => Node = () => {
   
 
           </View>
-           <KakaoPage/>
+           <ItemPage/>
     
     </SafeAreaView>
   );

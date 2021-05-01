@@ -1,21 +1,29 @@
 import React from 'react';
-import { Text, View , StyleSheet } from 'react-native';
+import { Text, View , StyleSheet,TouchableOpacity } from 'react-native';
 
-const CustomButton = () => (
+
+
+
+const CustomButton = ({onPress}) => (
+    <TouchableOpacity onPress={onPress}>
     <View style={styles.buttonContainer}>
       <Text style={styles.followers}>Follwers</Text>
     </View>
-
+ </TouchableOpacity>
   );
+
+
 
 const styles = StyleSheet.create({
     buttonContainer :{
-      flex: 0.5,
+      flex: 1,
       borderWidth: 2,
       borderColor :'purple',
       justifyContent: "center",
       borderRadius: 20,
       alignItems: "center",
+      width:100
+
 
     },
     followers: {

@@ -3,9 +3,8 @@ import { Text, View , StyleSheet,TouchableOpacity } from 'react-native';
 
 
 
-
-const CustomButton = ({onPress}) => (
-    <TouchableOpacity onPress={onPress}>
+const CustomButton = () => (
+    <TouchableOpacity >
     <View style={styles.buttonContainer}>
       <Text style={styles.followers}>Follwers</Text>
     </View>
@@ -22,7 +21,9 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       borderRadius: 20,
       alignItems: "center",
-      width:100
+      width:100,
+      
+     
 
 
     },

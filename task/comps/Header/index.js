@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View , StyleSheet } from 'react-native';
 import CustomButton from '../CustomButton';
 
-const Header = () => (
+const Header = ({onClick}) => (
     <View style={styles.headerContainer}>
       <Text style={styles.recent}>Recent</Text>
-      <CustomButton />
+      <CustomButton onPress={onClick}/>
     </View>
 
   );

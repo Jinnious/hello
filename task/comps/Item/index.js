@@ -16,16 +16,18 @@ import Header from '../Header';
 
 export default function ItemPage() {
   
-  
+const [follwer, setFollwer] = useState();
+
   const renderCard = ({ item, onPress}) => (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity key={item.id} onPress={()=>{
+      }}>
+        
     <View
       style={{
         flexDirection: "row",
         justifyContent: "center",
         margin: 10,
-      }}    
-    >
+      }}>
         <View >
           <Image source={{ uri: item.src }} style={styles.picture} />
           <View style={{ flex:1 }}>
@@ -44,7 +46,9 @@ export default function ItemPage() {
   );
   return (
     <SafeAreaView>
-      <FlatList
+
+
+      {/* <FlatList
         ListHeaderComponent={
           <View style={styles.spaceBetween}>
           <Header />
@@ -55,7 +59,7 @@ export default function ItemPage() {
         keyExtractor={(title) => title.id}
         style={{ margin: 15 }}
         numColumns={2}
-      />
+      /> */}
     </SafeAreaView>
   );
 }

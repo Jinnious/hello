@@ -19,9 +19,7 @@ export default function ItemPage() {
 const [follwer, setFollwer] = useState();
 
   const renderCard = ({ item, onPress}) => (
-    <TouchableOpacity key={item.id} onPress={()=>{
-      }}>
-        
+    <TouchableOpacity onPress={onPress}>
     <View
       style={{
         flexDirection: "row",
@@ -46,9 +44,7 @@ const [follwer, setFollwer] = useState();
   );
   return (
     <SafeAreaView>
-
-
-      {/* <FlatList
+      <FlatList
         ListHeaderComponent={
           <View style={styles.spaceBetween}>
           <Header />
@@ -59,7 +55,7 @@ const [follwer, setFollwer] = useState();
         keyExtractor={(title) => title.id}
         style={{ margin: 15 }}
         numColumns={2}
-      /> */}
+      />
     </SafeAreaView>
   );
 }

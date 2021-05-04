@@ -1,66 +1,50 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
-import React, { Component } from 'react';
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TextInput,
-  FlatList,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import Cards from './comps/Cards';
-
-export default  class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      query : null,
-      dataSource : [],
-      dataBackup :[]
-    };
-  }
-
+ import React from 'react';
+ import type {Node} from 'react';
+ import {
+   SafeAreaView,
+   ScrollView,
+   StatusBar,
+   StyleSheet,
+   Text,
+   useColorScheme,
+   View,
+ } from 'react-native';
+ 
+ 
+ import ItemPage from './comps/Item';
+ 
+ 
+ 
+ const App: () => Node = () => {
   
-
- render() {
-   return(
-     <SafeAreaView >
-         <View style={styles.container}>
+ 
+   return (
+     <SafeAreaView>
       
-      <Cards />
-  
-       
-     </View>
+ 
+     
+         <View>
+   
+ 
+           </View>
+            <ItemPage/>
+     
      </SafeAreaView>
-    
    );
- }
-}
-
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-  },
-  header :{
-    height: 80,
-    width :'100%',
-    backgroundColor : '#ff5b77',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems :'center'
-  },
-  input :{
-    height:45,
-    width :'90%',
-    backgroundColor: '#fff',
-    borderRadius :20,
-    padding: 5,
-
-
-  }
-});
+ };
+ 
+ const styles = StyleSheet.create({
+   
+   
+ });
+ 
+ export default App;
+ 
